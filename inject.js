@@ -1,0 +1,11 @@
+function a(b){c=document.all?event.clientX+document.body.scrollLeft:document.a?b.x+window.pageXOffset:b.clientX+window.pageXOffset;d=document.all?event.clientY+document.body.scrollTop:document.a?b.y+window.pageYOffset:b.clientY+window.pageYOffset}var e,f,g,c=0,d=0;void 0!=document.addEventListener?document.addEventListener("mousemove",a,!0):document.a&&document.captureEvents(Event.b|Event.c|Event.f);document.onmousemove=a;document.oncontextmenu=function(){return!1};document.onmousedown=function(b){3==b.which&&(document.getElementById("contextmenu").style.left=c+"px",document.getElementById("contextmenu").style.top=d+"px",document.getElementById("contextmenu").style.visibility="visible")};document.onmouseup=function(b){1==b.which&&(document.getElementById("contextmenu").style.visibility="hidden")};e=250,g=document.createElement("DIV");g.id="contextmenu";e||(e=120);g.style.width=e+"px";
+f='<div style="padding:4px;margin:2px;opacity:0.7;left:10px;top:-4px;border-style:double;border-width:15px;">\
+<font color="#565656" size="-2">Right Click Menu by <a href="http://www.whak.com" target="_top" title="WHAK it" alt="WHAK">WHAK</a>!</font><br>\
+<u style="color:blue;cursor:hand" title="Reload Page" onclick="window.location.reload();">Refresh</u><br>\
+<u style="color:blue;cursor:hand" title="Go Back" onclick="history.go(-1);">Back</u><br>\
+<u style="color:blue;cursor:hand" title="Go Forward" onclick="history.go(1);">Forward</u><br>\
+<u style="color:blue;cursor:hand" title="Back to top" onclick="window.scroll(0,0);">Top of page</u><br>\
+<u style="color:blue;cursor:hand" title="Bottom" onclick="window.scrollTo(0,document.body.scrollHeight);">Bottom of page</u><br>\
+<a href="http://www.make-gifs.com" title="Make animated GIFs online" alt="Animated GIF Maker" target="_blank">Make-GIFs.com</a><br>\
+<a href="http://www.make-a-meme.com" title="Make memes online" alt="Meme Maker" target="_blank">Make-A-Meme.com</a><br>\
+</div>';g.innerHTML=f;g.style.position="absolute";g.style.left="0px";g.style.top="0px";g.style.visibility="hidden";g.style.overflow="hidden";g.style.padding="4px";g.style.backgroundColor="#ffffff";g.style.border="1px solid #6a6868";document.body.appendChild(g);delete g;
